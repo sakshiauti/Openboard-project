@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        /* (*means)it is applies on all the elements of this page */
+        /* *{
+            border:1px solid red;
+        } */
+        /* body {
+            border: 1px solid blue;
+        }
+        html {
+            border: 1px solid gray;
+        } */
+        div {
+            border: 1px solid green;
+            /* background-color: lightpink; */
+        }
+
+        /* select */
+        .outer {
+            border: 3px solid purple;
+            width: 200px;
+            height: 50px;
+            display: flex;  /* three clr dots are in same line  [flexbox freecodecamp web used for this]  */
+            justify-content: space-evenly;   /* we move horizatly align(e.g end,space evenly, space between,etc)  */
+            align-items: center;   /* placed in center(vertical align) */
+        }
+        .red {
+            background-color: lightpink;
+            height: 35px;  /* ht and width always same */
+            width: 35px;
+            border-radius: 50%;  /* become circle */
+        }
+        .green {
+            background-color: lightgreen;
+            height: 35px;
+            width: 35px;
+            border-radius: 50%
+        }
+        .blue {
+            background-color: lightblue;
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+        }
+       .color-area {
+            border: 1px solid gray;
+            height: 100px;
+            width: 100px;
+            margin-top: 30px;
+            margin-left: 30px;
+        }
+    </style>
+    <!-- elements ki height unke content ke equal hoti hai -->
+    <!-- div -> width -> 100% -->
+    <!-- unless height or width is given -->
+    <!-- identify common tags -->
+    <div class="outer">
+        <div class="red"></div>
+        <div class="green"></div>
+        <div class="blue"></div>
+    </div>
+    
+    <div class="color-area"></div>  <!-- .color-area -->
+    <script>
+       
+        let colorArea = document.querySelector(".color-area");     // button -> click-> color 
+        let redColor = document.querySelector(".red");
+        let greenColor = document.querySelector(".green");
+        let blueColor = document.querySelector(".blue");
+        redColor.addEventListener("click", function () {
+            colorArea.style.backgroundColor = "lightpink";
+        })
+        greenColor.addEventListener("click", function () {
+            colorArea.style.backgroundColor = "lightgreen";
+        })
+        blueColor.addEventListener("click", function () {
+
+            colorArea.style.backgroundColor = "lightblue";
+        })
+
+    </script>
+</body>
+
+</html>
